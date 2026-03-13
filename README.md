@@ -24,43 +24,7 @@ Uma experiência imersiva de Realidade Aumentada para explorar a anatomia do cé
 
 ## 🚀 Como Executar
 
-### Opção 1: Local (Recomendado para desenvolvimento)
-
-#### Pré-requisitos
-- Um servidor HTTP local (Node.js, Python, etc.)
-- Navegador moderno com suporte a WebGL
-
-#### Passos
-
-1. **Clone ou baixe o repositório:**
-   ```bash
-   git clone https://github.com/carlosravick/AR-Education.git
-   cd AR-Education
-   ```
-
-2. **Inicie um servidor local:**
-
-   **Com Python 3:**
-   ```bash
-   python -m http.server 8000
-   ```
-
-   **Com Python 2:**
-   ```bash
-   python -m SimpleHTTPServer 8000
-   ```
-
-   **Com Node.js (http-server):**
-   ```bash
-   npx http-server
-   ```
-
-3. **Abra no navegador:**
-   ```
-   http://localhost:8000
-   ```
-
-### Opção 2: GitHub Pages (Para hospedagem online)
+### Opção 1: GitHub Pages (Recomendado)
 
 1. **Faça upload para GitHub:**
    ```bash
@@ -74,22 +38,45 @@ Uma experiência imersiva de Realidade Aumentada para explorar a anatomia do cé
 
 3. **Acesse via:**
    ```
-   https://seu-usuario.github.io/projetoCF/
+   https://seu-usuario.github.io/interactive-brain-ar/
    ```
 
-### Opção 3: Hospedagem Online
+### Opção 2: Hospedagem Online
+
+#### 🎯 **Netlify (Recomendado)** ✨
+1. Acesse [netlify.com](https://netlify.com)
+2. Conecte seu repositório GitHub
+3. Defina:
+   - **Build command:** deixe vazio
+   - **Publish directory:** `.` (raiz do projeto)
+4. Deploy automático realizado!
+
+#### Outras Opções:
 
 - **Vercel:** Deployar automaticamente do GitHub
-- **Netlify:** Drag & drop do folder
 - **Firebase Hosting:** Hospedagem gratuita do Google
+
+## 🎯 Acesso Rápido
+
+### 🌐 **Onde Usar a Aplicação?**
+
+**Escolha uma das opções acima e use a URL fornecida:**
+
+- ✅ **GitHub Pages:** `https://Carlosravick.github.io/interactive-brain-ar/`
+- ✅ **Netlify:** `https://seu-site.netlify.app` (URL gerada ao fazer deploy)
+- ✅ **Vercel ou Firebase:** URL gerada automaticamente pela plataforma
+
+### 📲 **Marcador HIRO (QR Code)**
+
+Este é o marcador que você precisa para a Realidade Aumentada funcionar:
+
+![Hiro Marker](https://upload.wikimedia.org/wikipedia/commons/d/d2/Hiro_marker.png)
+
 
 ## 📱 Como Usar
 
 ### 1. **Preparar o Marcador Hiro**
-- Imprima ou exiba na tela este marcador:
-  
-  ![Hiro Marker](https://upload.wikimedia.org/wikipedia/commons/d/d2/Hiro_marker.png)
-
+- Use o marcador exibido na seção **Acesso Rápido** acima
 - Coloque em frente à câmera do seu dispositivo
 
 ### 2. **Controlar o Cérebro**
@@ -109,7 +96,7 @@ Uma experiência imersiva de Realidade Aumentada para explorar a anatomia do cé
 ## 🛠️ Estrutura do Projeto
 
 ```
-projetoCF/
+interactive-brain-ar/
 ├── index.html              # Estrutura principal
 ├── css/
 │   └── styles.css          # Estilos da interface
