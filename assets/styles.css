@@ -1,0 +1,107 @@
+html, body {
+  margin: 0; padding: 0;
+  width: 100%; height: 100%;
+  overflow: hidden;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.overlay {
+  position: fixed;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+#header {
+  top: 0; left: 0; right: 0;
+  padding: 12px 16px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.75) 0%, transparent 100%);
+  color: #fff;
+}
+#header h1 {
+  font-size: 18px; margin: 0 0 2px 0;
+  background: linear-gradient(90deg, #6c63ff, #e94ecc);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+#header p { font-size: 11px; color: rgba(255,255,255,0.6); margin: 0; }
+
+#regionBtns {
+  top: 60px; right: 6px;
+  display: flex; flex-direction: column; gap: 3px;
+  pointer-events: auto;
+  max-height: calc(100vh - 180px);
+  overflow-y: auto;
+}
+.rbtn {
+  background: rgba(0,0,0,0.75);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px;
+  padding: 7px 10px;
+  color: #fff; font-size: 10px;
+  cursor: pointer;
+  display: flex; align-items: center; gap: 6px;
+  transition: all 0.25s;
+}
+.rbtn:hover, .rbtn.active {
+  border-color: #6c63ff;
+  background: rgba(108,99,255,0.3);
+  transform: scale(1.03);
+}
+.rbtn .cdot {
+  width: 8px; height: 8px;
+  border-radius: 50%; display: inline-block;
+  flex-shrink: 0;
+  box-shadow: 0 0 6px currentColor;
+}
+
+#infoPanel {
+  bottom: 16px; left: 12px; right: 12px;
+  max-width: 420px;
+  background: rgba(10, 10, 30, 0.94);
+  border: 1px solid rgba(108,99,255,0.4);
+  border-radius: 16px;
+  padding: 16px 18px;
+  backdrop-filter: blur(14px);
+  color: #fff;
+  transform: translateY(140%);
+  transition: transform 0.35s cubic-bezier(0.22,1,0.36,1);
+  pointer-events: auto;
+}
+#infoPanel.show { transform: translateY(0); }
+#infoPanel .rname {
+  font-size: 17px; font-weight: 700;
+  margin-bottom: 6px;
+  display: flex; align-items: center; gap: 8px;
+}
+#infoPanel .rname .idot {
+  width: 12px; height: 12px;
+  border-radius: 50%; display: inline-block;
+  box-shadow: 0 0 8px currentColor;
+}
+#infoPanel .rdesc {
+  font-size: 13px; line-height: 1.55;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 10px;
+}
+#infoPanel .rfunc {
+  font-size: 12px; line-height: 1.5;
+  color: rgba(255,255,255,0.6);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 8px;
+}
+#closeBtn {
+  position: absolute; top: 8px; right: 12px;
+  background: none; border: none;
+  color: rgba(255,255,255,0.5);
+  font-size: 24px; cursor: pointer;
+}
+
+#hint {
+  bottom: 16px; right: 12px;
+  color: rgba(255,255,255,0.4);
+  font-size: 10px; text-align: right;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
